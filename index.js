@@ -1,7 +1,7 @@
 // Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateSVG = require('./package-lock.json');
+const generateSVG = require('./utils/node_modules/generateSVG');
 
 // Create an array of questions for user input
 //const questions = [text, textColor, shape, shapeColor]
