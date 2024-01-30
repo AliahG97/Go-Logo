@@ -41,7 +41,7 @@ async function init() {
         let shape;
         switch (userInput.shape) {
             case 'circle':
-                shape = new Circle(userInput.text, userInput.textColor, userInput.shapeColor)
+                shape = new Circle(userInput.text, userInput.textColor, userInput.shapeColor);                
                 break;
             case 'triangle':
             shape = new Triangle(userInput.text, userInput.textColor, userInput.shapeColor)
@@ -52,7 +52,8 @@ async function init() {
             default:
                 throw new Error('Invalid shape choice');
         }        
-        const svgContent = shape.generateSVG();
+        
+        const svgContent = shape.generateSVGContent();
         //Write the SVG content to a file
         fs.writeFileSync('logo.svg', svgContent);
         console.log('Generate logo.svg');
