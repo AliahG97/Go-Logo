@@ -1,9 +1,11 @@
 // Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const {Shape, Circle, Triangle, Square} = require('./shape.js');
 const generateSVG = require('./utils/generateSVG');
 
-// Create an array of questions for user input
+//Defining class for shapes
+
 //const questions = [text, textColor, shape, shapeColor]
 
 const prompts = [
@@ -34,7 +36,24 @@ const prompts = [
 async function init() {
     try {
         const userInput = await inquirer.prompt(prompts);
-        const svgContent = generateSVG(userInput);
+        
+        // Creating an instance of each shapes subsclass based on the shape that the user selects 
+        let shape;
+        switch (userInput.shape) {
+            case 'circle':
+                shape = new Circle(userInput.text, userInput.textColor, userInput.shapeColor)
+                break;
+            case 'triangle':
+            shape = new Triangle(userInput.text, userInput.textColor, userInput.shapeColor)
+                break;
+            case 'square':
+                shape = new Square(userInput.text, userInput.textColor, userInput.shapeColor)
+                    break;
+            default:
+                throw new Error('Invalid shape choice');
+        }        
+        const svgContent = shape.generateSVG();
+        //Write the SVG content to a file
         fs.writeFileSync('logo.svg', svgContent);
         console.log('Generate logo.svg');
     } catch (error) {
