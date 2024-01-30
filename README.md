@@ -18,7 +18,7 @@ Go Logo is an application designed to generate professional SVG logos using a se
 To install this project git clone https://github.com/AliahG97/Go-Logo.git
 
 ## Screenshot
-![ReadMe Gen Screenshot](./utils/assets/images/Go-Logo-Screenshot.gif) https://aliahg97.github.io/Go-Logo/
+![ReadMe Gen Screenshot](./Assets/Images/Go-Logo-screenshot.gif) https://aliahg97.github.io/Go-Logo/
 
 
 ## Features
