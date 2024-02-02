@@ -48,11 +48,10 @@ by Aliah Guerra2024. Confidential and Proprietary. All Rights Reserved.
 - Add more shape options in the list of choices.
 
 ## Testing
-1. Cd to project file
-2. Npm install
-3. Node index.js
-4. Answer all questions prompted
-5. Click on the newly generated "logo.svg" file in the explore panel of the project files.
-6. Right click on the svg file and select "view in browser"
-7. View the logo as a rendered SVG file/ logo image.
+1. Install npm jest in shape.test.js ile 
+2. Select shape.test.js and open code
+3. In the terminal type: npm t
+4. Wait for test to run
+5. All 3 tests should return test results as "passed"
+
 
